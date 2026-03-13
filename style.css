@@ -17,16 +17,7 @@ body {
     overflow: hidden;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
-@media (min-width: 600px) {
-    body {
-        max-width: 430px;
-        margin: 0 auto;
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        position: relative; 
-    }
-}
+
 /* kode er lavet med inspiration og refernce fra https://www.w3schools.com/css/css3_flexbox.asp*/
 .app-header {
     grid-row: 1;
@@ -35,17 +26,18 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    border-bottom: 1px solid #eee; 
+ 
 }
+
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
 .brand-button {
     flex: 0 0 100px;
 }
+
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
 .brand-button img {
    height: 50px;
    width: auto;
-
 }
 
 
@@ -75,7 +67,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid #eee; 
     z-index: 100;
     background-color: #FFF0F0;
 }
@@ -92,4 +83,13 @@ body {
     width: 25px; 
     height: 25px;
     object-fit: contain;
+}
+
+/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+@media (min-width: 600px) {
+    body {
+        width: 100%;
+        margin: 0 auto;
+        position: relative; 
+    }
 }
