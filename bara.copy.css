@@ -1,0 +1,108 @@
+
+/*Reference fra baramjollragnheidardottir-sketch
+presentation Github*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+:root{
+    --color-bg: rgb(255,255,255);
+    --color-header: rgb(253,240,241);
+}
+
+
+/* kode er lavet med inspiration og reference fra https://www.w3schools.com/css/css_grid.asp*/
+body {
+    background-color: var(--color-bg)
+    display: grid;
+    grid-template-rows: 60px 1fr 70px; 
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+/* kode er lavet med inspiration og refernce fra https://www.w3schools.com/css/css3_flexbox.asp*/
+.app-header {
+    grid-row: 1;
+    background-color: var(--color-header)
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+ 
+}
+
+/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+.brand-button {
+    flex: 0 0 100px;
+}
+
+/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+.brand-button img {
+   height: 50px;
+   width: auto;
+}
+
+
+.header-title {
+    font-size: 1.1rem; 
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+.app-header::after {
+    content: "";
+    flex: 0 0 50px; 
+}
+
+.content-area {
+    grid-row: 2;
+    padding: 20px;
+    background-color: #ffffff;
+    /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+    -webkit-overflow-scrolling: touch;
+}
+
+.buttom-nav {
+    grid-row: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    background-color: #FFF0F0;
+}
+
+.nav-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-icon {
+    width: 25px; 
+    height: 25px;
+    object-fit: contain;
+}
+
+/* Kode lavet fra dem som vi har fået fonten fra, ændret af ai */
+@font-face {
+	font-family: 'JeanLucWeb-Bold';
+    src: url("../fonts/jeanlucweb-bold.woff") format("woff");
+}
+
+/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+@media (min-width: 600px) {
+    body {
+        width: 100%;
+        margin: 0 auto;
+        position: relative; 
+    }
+}
