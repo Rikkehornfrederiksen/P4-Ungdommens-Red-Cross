@@ -9,13 +9,13 @@ presentation Github*/
 
 :root{
     --color-bg: rgb(255,255,255);
-    --color-header: rgb(253,240,241);
+    --color-header: rgb(255,240,240);
 }
 
 
 /* kode er lavet med inspiration og reference fra https://www.w3schools.com/css/css_grid.asp*/
 body {
-    background-color: var(--color-bg)
+    background-color: var(--color-bg);
     display: grid;
     grid-template-rows: 60px 1fr 70px; 
     height: 100vh;
@@ -28,7 +28,7 @@ body {
 /* kode er lavet med inspiration og refernce fra https://www.w3schools.com/css/css3_flexbox.asp*/
 .app-header {
     grid-row: 1;
-    background-color: var(--color-header)
+    background-color: var(--color-header);
     display: flex;
     align-items: center;
     justify-content: space-between;
