@@ -67,7 +67,7 @@ body {
 .content-area {
     grid-row: 2;
     padding: 20px;
-    background-color: var(--color-header-footer);
+    background-color: var(--color-bg);
     /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
     -webkit-overflow-scrolling: touch;
 }
