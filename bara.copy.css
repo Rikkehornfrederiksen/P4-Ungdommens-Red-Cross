@@ -9,7 +9,7 @@ presentation Github*/
 
 :root{
     --color-bg: rgb(255,255,255);
-    --color-header: rgb(255,240,240);
+    --color-header-footer: rgb(255,240,240);
     --font-header: "JeanLucWeb-Bold";
     --color-text-header: rgb(60,40,80);
 
@@ -31,12 +31,12 @@ body {
 /* kode er lavet med inspiration og refernce fra https://www.w3schools.com/css/css3_flexbox.asp*/
 .app-header {
     grid-row: 1;
-    background-color: var(--color-header);
+    background-color: var(--color-header-footer);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    font-family: var(--font-header);
+    font: var(--font-header);
 }
 
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
@@ -67,7 +67,7 @@ body {
 .content-area {
     grid-row: 2;
     padding: 20px;
-    background-color: var(--color-bg);
+    background-color: var(--color-header-footer);
     /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
     -webkit-overflow-scrolling: touch;
 }
@@ -78,7 +78,7 @@ body {
     justify-content: space-around;
     align-items: center;
     z-index: 100;
-    background-color: var(--color-bg);
+    background-color: var(--color-header-footer);
 }
 
 .nav-buttons {
