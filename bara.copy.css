@@ -10,8 +10,8 @@ presentation Github*/
 :root{
     --color-bg: rgb(255,255,255);
     --color-header-footer: rgb(255,240,240);
-    --font-header: "JeanLucWeb-Bold";
-    --color-text-header: rgb(60,40,80);
+    --font-heading: "JeanLucWeb-Bold";
+    --color-text-heading: rgb(60,40,80);
 
 }
 
@@ -36,7 +36,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    font: var(--font-header);
+    font-family: var(--font-heading);
+    color: var(--color-text-heading);
 }
 
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
