@@ -82,7 +82,7 @@ body {
 
 .main__menu-item {
     font-family: "roboto regular";
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: inherit; /* sort som er default*/
     text-decoration: none; /* fjerner underline, da det er default når man har en a href link*/
     position: relative; /* passer på at den røde streg placerer sig i forhold til teksten */
@@ -101,11 +101,12 @@ body {
 }
 
 .main__menu-item:hover {
-    transform: scale(1.05); /*gør det større om 5%*/
+    transform: scale(1.10); /*gør det større om 10%*/
 }
 
 .main__menu-item:hover::after {
     width: 100%;
+    font-weight: bold;
 }
 
 .main__menu-item--active::after {
