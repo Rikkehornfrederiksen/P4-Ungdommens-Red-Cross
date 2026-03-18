@@ -73,11 +73,43 @@ body {
     padding: 0%;
 }
 
-/* Brugt mine noter til BEM og flex*/
+/* Brugt mine noter til BEM og flex, AI til at hjælpe med andre*/
 .main__menu {
     display: flex;
     justify-content: space-evenly; /*lárétt*/
     align-items: center; /*centrað lóðrétt*/
+}
+
+.main__menu-item {
+    font-family: 'JeanLucWeb-Bold', sans-serif;
+    font-size: 1.1rem;
+    color: inherit; /* sort som er default*/
+    text-decoration: none; /* fjerner underline, da det er default når man har en a href link*/
+    position: relative; /* passer på at den røde streg placerer sig i forhold til teksten */
+    transition: transform 0.2s ease;
+}
+
+.main__menu-item::after {
+    content: ""; /* er brugt med pseudo-elements og betyder "lave en tomt element", så har jeg ikke brug for ekstra div i html til at ha rød strejg*/
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    width: 0; /* starter skjult, så stregen kun vises ved hover eller active */
+    height: 0.12rem;
+    background-color: red;
+    transition: width 0.3s ease; /* gør at stregen glider blødt ud */
+}
+
+.main__menu-item:hover {
+    transform: scale(1.05); /*gør det større om 5%*/
+}
+
+.main__menu-item:hover::after {
+    width: 100%;
+}
+
+.main__menu-item--active::after {
+    width: 100%;
 }
 
 .bottom-nav {
