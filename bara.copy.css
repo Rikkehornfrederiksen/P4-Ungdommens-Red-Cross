@@ -73,6 +73,13 @@ body {
     padding: 0%;
 }
 
+/* Brugt mine noter til BEM og flex*/
+.main__menu {
+    display: flex;
+    justify-content: space-evenly; /*lárétt*/
+    align-items: center; /*centrað lóðrétt*/
+}
+
 .bottom-nav {
     grid-row: 3;
     display: flex;
