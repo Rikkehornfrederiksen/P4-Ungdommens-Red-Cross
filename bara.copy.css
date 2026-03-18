@@ -73,13 +73,12 @@ body {
     padding: 0%;
 }
 
-/* Brugt mine noter til BEM og flex, AI til at hjælpe med andre*/
+/* Brugt mine noter til BEM og flex, AI til at hjælpe med andre, det er til ALLE main menu */
 .main__menu {
     display: flex;
     justify-content: space-evenly; /*lárétt*/
     align-items: center; /*centrað lóðrétt*/
 }
-
 .main__menu-item {
     font-family: "roboto regular";
     font-size: 1.2rem;
@@ -88,7 +87,6 @@ body {
     position: relative; /* passer på at den røde streg placerer sig i forhold til teksten */
     transition: transform 0.2s ease;
 }
-
 .main__menu-item::after {
     content: ""; /* er brugt med pseudo-elements og betyder "lave en tomt element", så har jeg ikke brug for ekstra div i html til at ha rød strejg*/
     position: absolute;
@@ -99,16 +97,13 @@ body {
     background-color: red;
     transition: width 0.3s ease; /* gør at stregen glider blødt ud */
 }
-
 .main__menu-item:hover {
     transform: scale(1.10); /*gør det større om 10%*/
 }
-
 .main__menu-item:hover::after {
     width: 100%;
     font-weight: bold;
 }
-
 .main__menu-item--active::after {
     width: 100%;
 }
@@ -149,8 +144,6 @@ body {
         margin: 0 auto;
         position: relative; 
     }
-}
-@media (min-width: 600px){
 
     .nav-icon{
         width:70px;
