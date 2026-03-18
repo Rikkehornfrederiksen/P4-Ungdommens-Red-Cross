@@ -81,7 +81,7 @@ body {
 }
 
 .main__menu-item {
-    font-family: 'JeanLucWeb-Bold', sans-serif;
+    font-family: "roboto regular"
     font-size: 1.1rem;
     color: inherit; /* sort som er default*/
     text-decoration: none; /* fjerner underline, da det er default når man har en a href link*/
