@@ -91,7 +91,7 @@ body {
 /* Kode lavet fra dem som vi har fået fonten fra, ændret af ai */
 @font-face {
 	font-family: 'JeanLucWeb-Bold';
-    src: url("../fonts/jeanlucweb-bold.woff") format("woff");
+    src: url("/fonts/jeanlucweb-bold.woff") format("woff");
 }
 
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
