@@ -135,7 +135,11 @@ body {
 }
 
 .card-vagt__content{
-    display: grid;  
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-vagt__text{
@@ -163,7 +167,12 @@ body {
 }
 
 .card-vagt__button{
-
+    align-self: center;
+    font-family: "roboto regular";
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .footer{
