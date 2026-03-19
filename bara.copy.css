@@ -116,7 +116,7 @@ body {
     grid-template-columns: auto 1px 1fr; /* auto er at den tage lige så meget plads og content er stor*/
     gap: 1rem;
     align-items: center;
-    border: 1px solid rgb(68, 36, 94);
+    border: 2px solid rgb(68, 36, 94);
     border-radius: 5%;
     padding: 0.5rem;
 }
@@ -129,7 +129,7 @@ body {
 }
 
 .card-vagt__line{
-    width: 1px;
+    width: 2px;
     height: 80%;
     background-color: rgb(68, 36, 94);
 }
