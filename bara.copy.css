@@ -122,9 +122,10 @@ body {
 }
 
 .card-vagt__date{
-    font-family: "roboto regular bold";
+    font-family: "roboto regular";
     font-size: 1.5rem;
     color: rgb(68, 36, 94);
+    font-weight: bold;
 }
 
 .card-vagt__line{
@@ -132,7 +133,8 @@ body {
 }
 
 .card-vagt__content{
-    
+    display: grid;
+    grid-template-columns: auto, 1px;    
 }
 
 .card-vagt__text{
