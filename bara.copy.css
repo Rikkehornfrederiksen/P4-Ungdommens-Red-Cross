@@ -175,6 +175,7 @@ body {
     color: rgb(255, 255, 255);
     border-radius: 5px;
     border-width: 1px;
+    padding: 0.5rem;
 }
 
 .footer{
