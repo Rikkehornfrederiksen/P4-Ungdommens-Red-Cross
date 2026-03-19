@@ -117,7 +117,7 @@ body {
     gap: 1rem;
     align-items: center;
     border: 2px solid rgb(68, 36, 94);
-    border-radius: 5%;
+    border-radius: 10px;
     padding: 0.5rem;
 }
 
