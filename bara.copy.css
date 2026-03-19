@@ -129,12 +129,13 @@ body {
 }
 
 .card-vagt__line{
-    color: rgb(68, 36, 94);
+    width: 1px;
+    height: 80%;
+    background-color: rgb(68, 36, 94);
 }
 
 .card-vagt__content{
-    display: grid;
-    grid-template-rows: auto, 1px;    
+    display: grid;  
 }
 
 .card-vagt__text{
