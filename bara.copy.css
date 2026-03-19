@@ -105,6 +105,35 @@ body {
     width: 100%;
 }
 
+.overblik-vagter{
+    display: grid;
+    gap: 1rem;
+    }
+
+.card-vagt{
+    display: grid;
+    grid-template-columns: auto 1px 1fr; /* auto er at den tage lige så meget plads og content er stor*/
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid rgb(68, 36, 94);
+}
+
+.card-vagt__date
+
+.card-vagt__line
+
+.card-vagt__content
+
+.card-vagt__text
+
+.card-vagt__title
+
+.card-vagt__time
+
+.card-vagt__location
+
+.card-vagt__button
+
 .footer{
    background-color: #FFF0F0; 
 }
