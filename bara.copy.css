@@ -108,6 +108,10 @@ body {
     width: 100%;
 }
 
+.footer{
+   background-color: #FFF0F0; 
+}
+
 .bottom-nav {
     grid-row: 3;
     display: flex;
