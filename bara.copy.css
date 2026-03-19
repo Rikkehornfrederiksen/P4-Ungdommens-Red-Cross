@@ -134,7 +134,7 @@ body {
 
 .card-vagt__content{
     display: grid;
-    grid-template-columns: auto, 1px;    
+    grid-template-rows: auto, 1px;    
 }
 
 .card-vagt__text{
