@@ -17,7 +17,6 @@ body {
     overflow: hidden;
 }
 
-
 /* kode er lavet med inspiration og refernce fra https://www.w3schools.com/css/css3_flexbox.asp*/
 .app-header {
     grid-row: 1;
@@ -28,8 +27,6 @@ body {
     padding: 0 5%;
  
 }
-
-
 
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
 /* logoið sendir til baka til mine vagter*/
