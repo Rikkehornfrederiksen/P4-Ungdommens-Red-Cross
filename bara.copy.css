@@ -79,7 +79,7 @@ body {
 .main__menu-item {
     font-family: "roboto regular";
     font-size: 1.2rem;
-    color: inherit; /* sort som er default*/
+    color: rgb(68, 36, 94);
     text-decoration: none; /* fjerner underline, da det er default når man har en a href link*/
     position: relative; /* passer på at den røde streg placerer sig i forhold til teksten */
     transition: transform 0.2s ease;
@@ -116,23 +116,50 @@ body {
     gap: 1rem;
     align-items: center;
     border: 1px solid rgb(68, 36, 94);
+    border-radius: 5%;
 }
 
-.card-vagt__date
+.card-vagt__date{
+    font-family: "roboto regular";
+    font-size: 1.5rem;
+    color: rgb(68, 36, 94);
+}
 
-.card-vagt__line
+.card-vagt__line{
+    color: rgb(68, 36, 94);
+}
 
-.card-vagt__content
+.card-vagt__content{
+    
+}
 
-.card-vagt__text
+.card-vagt__text{
+    font-family: "roboto regular";
+    font-size: 1rem;
+    color: rgb(68, 36, 94);
+}
 
-.card-vagt__title
+.card-vagt__title{
+    font-family: "roboto regular";
+    font-size: 1.2rem;
+    color: rgb(68, 36, 94);
+}
 
-.card-vagt__time
+.card-vagt__time{
+    font-family: "roboto regular";
+    font-size: 1rem;
+    color: rgb(68, 36, 94);
+}
 
-.card-vagt__location
+.card-vagt__location{
+    font-family: "roboto regular";
+    font-size: 1rem;
+    color: rgb(68, 36, 94);
+}
 
-.card-vagt__button
+.card-vagt__button{
+
+}
 
 .footer{
    background-color: #FFF0F0; 
