@@ -144,6 +144,7 @@ body {
 .card-vagt__text{
     display: flex;
     flex-direction: column;
+    gap: 0.25rem;
     font-family: "roboto regular";
     font-size: 1rem;
     color: rgb(68, 36, 94);
@@ -153,18 +154,21 @@ body {
     font-family: "roboto regular";
     font-size: 1.2rem;
     color: rgb(68, 36, 94);
+    margin: 0;
 }
 
 .card-vagt__time{
     font-family: "roboto regular";
     font-size: 1rem;
     color: rgb(68, 36, 94);
+    margin: 0;
 }
 
 .card-vagt__location{
     font-family: "roboto regular";
     font-size: 1rem;
     color: rgb(68, 36, 94);
+    margin: 0;
 }
 
 .card-vagt__button{
