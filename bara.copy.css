@@ -150,6 +150,20 @@ body {
     color: rgb(68, 36, 94);
 }
 
+.card-vagt__heading{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-vagt__dot{
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
 .card-vagt__title{
     font-family: "roboto regular";
     font-size: 1.2rem;
