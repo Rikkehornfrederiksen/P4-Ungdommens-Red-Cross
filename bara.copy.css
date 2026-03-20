@@ -48,7 +48,7 @@ main {
 
 /*hjælp fra ai men brugt font family som vi har dw*/
 .header-title {
-    font-size: 1.1rem; 
+    font-size: 2rem; 
     flex-grow: 1;
     text-align: center;
     font-family: 'JeanLucWeb-Bold', sans-serif;
