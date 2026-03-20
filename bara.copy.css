@@ -142,31 +142,34 @@ body {
     gap: 1rem;
 }
 
-.card-vagt__text{
+.card-vagt__text {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    padding-left: 1.2rem;
     font-family: "roboto regular";
     font-size: 1rem;
     color: rgb(68, 36, 94);
 }
 
 .card-vagt__heading {
-    display: grid;
-    grid-template-columns: 12px auto;
+    position: relative;
+    display: flex;
     align-items: center;
-    column-gap: 0.4rem;
 }
 
 .card-vagt__dot {
+    position: absolute;
+    left: -1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
     width: 8px;
     height: 8px;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;
-    justify-self: center;
 }
 
-.card-vagt__title{
+.card-vagt__title {
     font-family: "roboto regular";
     font-size: 1.2rem;
     color: rgb(68, 36, 94);
