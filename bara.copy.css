@@ -174,12 +174,12 @@ body {
 .card-vagt__button{
     align-self:center;
     font-family: "roboto regular";
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
     border-radius: 5px;
-    border-width: 1px;
+    border: 1px, red;
     padding: 0.6rem 2rem;
 }
 
