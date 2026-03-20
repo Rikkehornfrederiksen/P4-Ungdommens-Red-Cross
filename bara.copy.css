@@ -14,7 +14,13 @@ body {
     height: 100vh;
     width: 100%;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
+}
+
+/* lavet med ai til at få main til at scroll og header/footer er sticky*/
+main {
+    min-height: 0;
+    overflow-y: auto;
 }
 
 /* kode er lavet med inspiration og refernce fra https://www.w3schools.com/css/css3_flexbox.asp*/
@@ -40,7 +46,7 @@ body {
    width: auto;
 }
 
-
+/*hjælp fra ai men brugt font family som vi har dw*/
 .header-title {
     font-size: 1.1rem; 
     flex-grow: 1;
