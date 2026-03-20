@@ -151,18 +151,19 @@ body {
     color: rgb(68, 36, 94);
 }
 
-.card-vagt__heading{
-        position: relative;
+.card-vagt__heading {
+    display: grid;
+    grid-template-columns: 12px auto;
+    align-items: center;
+    column-gap: 0.4rem;
 }
 
-.card-vagt__dot{
-    position: absolute;
-    left: -12px; /* stilla þetta eftir smekk */
-    top: 0.4em;
+.card-vagt__dot {
     width: 8px;
     height: 8px;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;
+    justify-self: center;
 }
 
 .card-vagt__title{
