@@ -111,6 +111,7 @@ main {
     width: 100%;
 }
 
+/*AI hjælper med at lave alle card classes*/
 .overblik-vagter{
     display: grid;
     gap: 1rem;
@@ -209,6 +210,16 @@ main {
     border-radius: 5px;
     border: 1px solid rgb(255, 0, 0);
     padding: 0.2rem 2rem;
+}
+
+/*lavet med hjælp af AI hvordan man bruger modifier ift. state og JS*/
+.card-vagt--anmodet .card-vagt__dot { /*parent state --anmodet child state er block og element*/
+    background-color: orange;
+}
+.card-vagt--anmodet .card-vagt__button {
+    color: rgb(68, 36, 94);
+    background-color: orange; 
+    border: 1px solid orange;
 }
 
 .footer{

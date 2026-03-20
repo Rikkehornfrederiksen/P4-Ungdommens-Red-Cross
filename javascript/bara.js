@@ -1,18 +1,9 @@
 
-//krav hele pensum
+const buttons = document.querySelectorAll('.card-vagt__button');
 
-//JavaScript.
-//Placering og udførelse af JS.
-//Fejlfinding.
-//Variabler og typer.
-//Operatorer.
-//Arrays.
-//Kontrolstruktur (if-Else).
-//Kontrolstruktur (loops).
-//Objekter.
-//DOM (Document Object Model).
-//Funktioner (mere end halvejs).
-//Variable scoop (herunder LET).
-//Events.
-//Libraries.
-//BEM. 
+buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        const card = button.closest('.card-vagt');
+        card.classList.add('card-vagt--anmodet');
+    });
+});
