@@ -126,6 +126,7 @@ body {
     font-size: 1.5rem;
     color: rgb(68, 36, 94);
     font-weight: bold;
+    margin: 0;
 }
 
 .card-vagt__line{
@@ -151,17 +152,17 @@ body {
 }
 
 .card-vagt__heading{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+        position: relative;
 }
 
 .card-vagt__dot{
+    position: absolute;
+    left: -12px; /* stilla þetta eftir smekk */
+    top: 0.4em;
     width: 8px;
     height: 8px;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;
-    flex-shrink: 0;
 }
 
 .card-vagt__title{
@@ -193,7 +194,7 @@ body {
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
     border-radius: 5px;
-    border: 1px, red;
+    border: 1px solid rgb(255, 0, 0);
     padding: 0.2rem 2rem;
 }
 
