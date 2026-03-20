@@ -169,6 +169,10 @@ body {
     border-radius: 50%;
 }
 
+.card-vagt__dot--bekræftet {
+    background-color: rgb(45, 219, 36);
+}
+
 .card-vagt__title {
     font-family: "roboto regular";
     font-size: 1.2rem;
