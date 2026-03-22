@@ -4,24 +4,30 @@ const vagter = [
         dateDay: 'Ons. 4.',
         dateMonth: 'April',
         title: 'Kundebetjening',
-        time: '14.00-17.00, Røde Kors',
-        location: 'Fjordsgade 9, 5000 Odense C',
+        time: '14.00-17.00',
+        organisation: 'Røde Kors',
+        street: 'Fjordsgade 9,',
+        city: '5000 Odense C',
         isApplied: false
     },
     {
         dateDay: 'Tors. 11.',
         dateMonth: 'April',
         title: 'Kundebetjening',
-        time: '14.00-17.00, Røde Kors',
-        location: 'Fjordsgade 9, 5000 Odense C',
+        time: '14.00-17.00',
+        organisation: 'Røde Kors',
+        street: 'Fjordsgade 9,',
+        city: '5000 Odense C',
         isApplied: false
     },
     {
         dateDay: 'Man. 16.',
         dateMonth: 'April',
         title: 'Kundebetjening',
-        time: '10.00-14.00, Røde Kors',
-        location: 'Fjordsgade 9, 5000 Odense C',
+        time: '10.00-14.00',
+        organisation: 'Røde Kors',
+        street: 'Fjordsgade 9,',
+        city: '5000 Odense C',
         isApplied: false
     }
 ];
@@ -58,10 +64,18 @@ vagter.forEach(function(vagt) {
     const time = document.createElement('p');
     time.classList.add('card-vagt__time');
     time.textContent = vagt.time;
-
-    const location = document.createElement('p');
-    location.classList.add('card-vagt__location');
-    location.innerHTML = vagt.location;
+    
+    const organisation = document.createElement('p');
+    organisation.classList.add('card-vagt__location');
+    organisation.textContent = vagt.organisation;
+    
+    const street = document.createElement('p');
+    street.classList.add('card-vagt__location');
+    street.textContent = vagt.street;
+    
+    const city = document.createElement('p');
+    city.classList.add('card-vagt__location');
+    city.textContent = vagt.city;
 
     const button = document.createElement('button');
     button.classList.add('card-vagt__button');
@@ -77,21 +91,23 @@ vagter.forEach(function(vagt) {
     }
 });
 
-    card.appendChild(date);
-    card.appendChild(line);
-    card.appendChild(content);
-    content.appendChild(text);
-    text.appendChild(heading);
-    heading.appendChild(dot);
-    heading.appendChild(title);
-    text.appendChild(time);
-    text.appendChild(location);
-    content.appendChild(button);
+card.appendChild(date);
+card.appendChild(line);
+card.appendChild(content);
+content.appendChild(text);
+text.appendChild(heading);
+heading.appendChild(dot);
+heading.appendChild(title);
+text.appendChild(time);
+text.appendChild(organisation);
+text.appendChild(street);
+text.appendChild(city);
+content.appendChild(button);
 
-    container.appendChild(card);
-
-    if (vagt.isApplied === true) {
+if (vagt.isApplied === true) {
     card.classList.add('card-vagt--anmodet');
     button.textContent = 'Anmodet';
 }
+
+container.appendChild(card);
 });

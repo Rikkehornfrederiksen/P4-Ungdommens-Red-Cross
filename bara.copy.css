@@ -120,7 +120,7 @@ main {
 
 .card-vagt{
     display: grid;
-    grid-template-columns: auto 1px 1fr; /* auto er at den tage lige så meget plads og content er stor*/
+    grid-template-columns: 160px 2px 1fr;
     gap: 0.5rem;
     align-items: center;
     border: 2px solid rgb(68, 36, 94);
@@ -202,14 +202,16 @@ main {
 }
 
 .card-vagt__button{
-    align-self:center;
+    align-self: center;
     font-family: "roboto regular";
     font-size: 1.5rem;
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
     border-radius: 5px;
     border: 1px solid rgb(255, 0, 0);
-    padding: 0.2rem 2rem;
+    padding: 0.2rem 1.2rem;
+    width: 200px;
+    text-align: center;
 }
 
 /*lavet med hjælp af AI hvordan man bruger modifier ift. state og JS*/
