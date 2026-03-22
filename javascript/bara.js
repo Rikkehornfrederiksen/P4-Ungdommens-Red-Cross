@@ -92,5 +92,6 @@ vagter.forEach(function(vagt) {
 
     if (vagt.isApplied === true) {
     card.classList.add('card-vagt--anmodet');
+    button.textContent = 'Anmodet';
 }
 });
