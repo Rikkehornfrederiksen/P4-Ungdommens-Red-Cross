@@ -1,9 +1,9 @@
 
-const buttons = document.querySelectorAll('.card-vagt__button');
-
-buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        const card = button.closest('.card-vagt');
-        card.classList.add('card-vagt--anmodet');
-    });
-});
+const vagt = {
+    dateDay: 'Ons. 4.',
+    dateMonth: 'April',
+    title: 'Kundebetjening',
+    time: '14.00-17.00, Røde Kors',
+    location: 'Fjordsgade 9, 5000 Odense C',
+    isApplied: false
+};
