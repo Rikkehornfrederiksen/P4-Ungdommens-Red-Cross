@@ -35,7 +35,12 @@ vagter.forEach(function(vagt) {
     const date = document.createElement('p');
     date.classList.add('card-vagt__date');
     date.innerHTML = vagt.dateDay + '<br>' + vagt.dateMonth;
+  
+    const line = document.createElement('div');
+    line.classList.add('card-vagt__line');
     
     card.appendChild(date);
+    card.appendChild(line);
+
     container.appendChild(card);
 });
