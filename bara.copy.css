@@ -120,7 +120,7 @@ main {
 
 .card-vagt{
     display: grid;
-    grid-template-columns: 160px 2px 1fr;
+    grid-template-columns: 120px 2px 1fr;
     gap: 0.5rem;
     align-items: center;
     border: 2px solid rgb(68, 36, 94);
@@ -142,21 +142,23 @@ main {
     background-color: rgb(68, 36, 94);
 }
 
-.card-vagt__content{
+.card-vagt__content {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    min-width: 0;
 }
 
 .card-vagt__text {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.15rem;
     padding-left: 1.2rem;
     font-family: "roboto regular";
     font-size: 1rem;
     color: rgb(68, 36, 94);
+    min-width: 0;
 }
 
 .card-vagt__heading {
@@ -201,7 +203,7 @@ main {
     margin: 0;
 }
 
-.card-vagt__button{
+.card-vagt__button {
     align-self: center;
     font-family: "roboto regular";
     font-size: 1.5rem;
@@ -209,9 +211,8 @@ main {
     color: rgb(255, 255, 255);
     border-radius: 5px;
     border: 1px solid rgb(255, 0, 0);
-    padding: 0.2rem 1.2rem;
-    width: 200px;
-    text-align: center;
+    padding: 0.2rem 1rem;
+    min-width: 7.5rem;
 }
 
 /*lavet med hjælp af AI hvordan man bruger modifier ift. state og JS*/
