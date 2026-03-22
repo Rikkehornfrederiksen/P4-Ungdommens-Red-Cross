@@ -71,6 +71,7 @@ vagter.forEach(function(vagt) {
     if (vagt.isApplied === false) {
         vagt.isApplied = true;
         card.classList.add('card-vagt--anmodet');
+        button.textContent = 'Anmodet';
     } else {
         console.log('Vagten er allerede anmodet');
     }
