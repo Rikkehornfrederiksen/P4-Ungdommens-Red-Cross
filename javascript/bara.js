@@ -55,6 +55,26 @@ vagter.forEach(function(vagt) {
     title.classList.add('card-vagt__title');
     title.textContent = vagt.title;
 
+    const time = document.createElement('p');
+    time.classList.add('card-vagt__time');
+    time.textContent = vagt.time;
+
+    const location = document.createElement('p');
+    location.classList.add('card-vagt__location');
+    location.innerHTML = vagt.location;
+
+    const button = document.createElement('button');
+    button.classList.add('card-vagt__button');
+    button.textContent = 'Anmod';
+
+    button.addEventListener('click', function() {
+    if (vagt.isApplied === false) {
+        vagt.isApplied = true;
+        card.classList.add('card-vagt--anmodet');
+    } else {
+        console.log('Vagten er allerede anmodet');
+    }
+});
 
     card.appendChild(date);
     card.appendChild(line);
@@ -63,6 +83,13 @@ vagter.forEach(function(vagt) {
     text.appendChild(heading);
     heading.appendChild(dot);
     heading.appendChild(title);
+    text.appendChild(time);
+    text.appendChild(location);
+    content.appendChild(button);
 
     container.appendChild(card);
+
+    if (vagt.isApplied === true) {
+    card.classList.add('card-vagt--anmodet');
+}
 });
