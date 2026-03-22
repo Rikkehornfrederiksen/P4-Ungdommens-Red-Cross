@@ -26,7 +26,7 @@ const vagter = [
     }
 ];
 
-const container = document.getElementById("overblik-vagter");
+const container = document.getElementById('overblik-vagter');
 
 vagter.forEach(function(vagt) {
     const card = document.createElement('article');
@@ -38,9 +38,31 @@ vagter.forEach(function(vagt) {
   
     const line = document.createElement('div');
     line.classList.add('card-vagt__line');
+
+    const content = document.createElement('div');
+    content.classList.add('card-vagt__content');
+
+    const text = document.createElement('div');
+    text.classList.add('card-vagt__text');
     
+    const heading = document.createElement('div');
+    heading.classList.add('card-vagt__heading');
+
+    const dot = document.createElement('span');
+    dot.classList.add('card-vagt__dot');
+    
+    const title = document.createElement('h2');
+    title.classList.add('card-vagt__title');
+    title.textContent = vagt.title;
+
+
     card.appendChild(date);
     card.appendChild(line);
+    card.appendChild(content);
+    content.appendChild(text);
+    text.appendChild(heading);
+    heading.appendChild(dot);
+    heading.appendChild(title);
 
     container.appendChild(card);
 });
