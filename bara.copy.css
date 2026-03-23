@@ -85,6 +85,7 @@ main {
 }
 .main__menu-item {
     font-family: "roboto regular";
+    font-weight: bold;
     font-size: 1.2rem;
     color: rgb(68, 36, 94);
     text-decoration: none; /* fjerner underline, da det er default når man har en a href link*/
