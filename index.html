@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>App Rødekors ungdommen</title>
-        <link rel="stylesheet" href="style.css">
-        
-       
-        
+        <title>App Ungdommens Røde Kors</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="javascript.js" defer></script>
     </head>
         
-        <body>
-            <header class="header">
-                <img href src="images/logo.png" alt="Røde Kors ungdommens logo.">
-                
-            </header>
-            <main>
-                
-            </main>
+
+
+    <body class="lyseroed-baggrund login-layout">
+    
+    <!-- HEADER SEKTION -->
+    <header class="login-header"></header>
+       
+    <!-- MAIN SEKTION -->
+    <!-- Sarah: Brugt ChatpGPT til sparring med BEM (prompt 3 og 5) -->
+    <main>
+        <section class="login">
+
+        <img class="login__logo" src="billeder/URK_logo_rgb_rosa.jpg" alt="Logo til Ungdommens Røde Kors">
+
+        <form class="login__form">
+
+            <!-- Sarah: Brugt ChatpGPT til sparring med BEM (prompt 5) -->
+            <label class="login__label" for="email">E-mail</label>
+            <input class="login__input login__input--email" type="email" id="email" placeholder="Angiv din e-mail">
+
+            <label class="login__label" for="kode">Adgangskode</label>
+            <input class="login__input login__input--kode" type="password" id="kode" placeholder="Angiv din kode">
+
+            <p class="login__fejl" id="fejl"></p>
+
+            <button class="login__knap login__knap--primary">Log ind</button>
+
+            <a href="bliv-frivillig.html" class="login__knap login__knap--secondary">Bliv frivillig</a>
+
+        </form>
+
+        </section>
+    </main>
                       
+    <!-- FOOTER SEKTION -->
+    <footer class="login-footer"></footer>
 
-            
-            <footer>
-
-            </footer>
-
-        </body>
+    </body>
 </html>

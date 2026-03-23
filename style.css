@@ -85,6 +85,286 @@ body {
     object-fit: contain;
 }
 
+
+
+/* SARAH'S CSS KODE */
+/* Sarah: Brugt ChatGPT til at samle to CSS filer til én (prompt 30) */
+/* Sarah's kodedel - LAYOUT AF LOGIN SIDE */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* GRUNDLAYOUT */
+body {
+    font-family: Arial, sans-serif;
+    color: #2d233e;
+}
+
+/* LOGIN SIDE */
+/* Sarah: Brugt ChatGPT til sparring (prompt 29)*/
+.lyseroed-baggrund {
+    background-color: #FFF0F1;
+}
+
+.login-layout {
+    display: grid; /* Grid layout til hele siden */
+    grid-template-rows: auto 1fr auto; /* Auto = header får den rette højde, 1fr = main fylder resten af pladsen, auto = footer får sin naturlige højde. */
+    min-height: 100vh; /* Sikrer at siden altid fylder mindst hele skærmens højde */
+}
+
+
+
+/* HEADER */
+.login-header {
+    display: flex;
+    justify-content: center; /* Centrerer indholdet horisontalt */
+    padding: 1.25rem;
+}
+
+
+/* Sarah: Jeg har brugt ChatGPT til sparring om BEM (prompt 6) */
+/* Sarah: Jeg har brugt ChatGPT til sparring om rem (prompt 7)*/
+/* BLOK */
+.login-layout main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 90%;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+
+/* ELEMENTER */
+.login__logo {
+    width: 18.75rem;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+}
+
+
+/* LOGIN FORMULAR */
+/* Flexbox bruges til at stable inputfelter og knapper ovenpå hinanden. */
+.login__form {
+    display: flex;
+    flex-direction: column; 
+}
+
+.login__form input,
+.login__form .login__knap {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.875rem;
+}
+
+.login__form input {
+    margin-top: 5px;
+}
+
+
+/* MODIFIERS */
+.login__knap--primary { /* Log ind knap */
+    background-color: #e30a0b;
+    color: white;
+}
+
+.login__knap--secondary { /* Bliv frivillig knap */
+    background-color: #2d233e;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.login__fejl { /* Fejlmeddelelse */
+    color:#e30a0b;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+
+/* FOOTER */
+.login-footer {
+    height: 60px;
+}
+
+
+
+/* MIN VAGT SIDE */
+body.min-vagt-layout {
+    display: grid;
+    grid-template-rows: 60px 1fr 70px;
+    height: 100vh;
+    width: 100%;
+}
+
+/* kode er lavet med inspiration og refernce fra https://www.w3schools.com/css/css3_flexbox.asp*/
+/* HEADER */
+.app-header {
+    grid-row: 1;
+    background-color: #FFF0F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+.brand-button {
+    flex: 0 0 100px;
+}
+
+/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+.brand-button img {
+    height: 50px;
+    width: auto;
+}
+
+.header-title {
+    font-size: 1.1rem;
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+.app-header::after {
+    content: "";
+    flex: 0 0 50px;
+}
+
+.content-area {
+    grid-row: 2;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* FOOTER NAV */
+.bottom-nav {
+    grid-row: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFF0F0;
+}
+
+.nav-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+
+/* Sarah: Brugt ChatGPT til sparring (prompt 28) */
+/* VAGT INFO */
+.vagt-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vagt-info__venstre {
+    border-right: 1px solid #2d233e;
+    padding-right: 1rem;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.vagt-info__hoejre {
+    font-size: 0.75rem;
+}
+
+/* SECTIONS */
+.content-area section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #2d233e;
+}
+
+/* OPGAVER */
+.opgaver__liste {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.opgaver__type {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.opgaver h3 {
+    font-size: 1.1rem;
+}
+
+/* Sarah: Brugt ChapGPT til sparring (prompt 32) */
+/* KOLLEGAER */
+.kollega {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #2d233e;
+}
+
+.kollega:last-child {
+    border-bottom: none;
+}
+
+.kollega__initialer {
+    background-color: #FFF0F1;
+    color: #2d233e;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.kollega__navn {
+    font-weight: bold;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.kollega__detaljer {
+    margin: 0;
+    color: #2d233e;
+    font-size: 0.9rem;
+}
+
+.kollega__pil {
+    margin-left: auto;
+    font-size: 1.6rem;
+    color: #e30a0b;
+}
+
+.kollegaer h3 {
+    font-size: 1.1rem;
+}
+
+
+
+
 /* Kode lavet fra dem som vi har fået fonten fra, ændret af ai */
 @font-face {
 	font-family: 'JeanLucWeb-Bold';
@@ -106,4 +386,31 @@ body {
         height:70px;
     }
 
+}
+
+
+
+/* SARAH'S CSS KODE */
+/* AI brugt til denne kode, refere til dokument AI prompt Rikke */
+
+
+/* LOGO STØRRELSE */
+.login__logo {
+    width: 22rem;
+    padding-bottom: 3rem;
+}
+
+
+
+/* LOGIN CONTAINER GØRES BREDERE */
+.login {
+    max-width: 30rem;
+}
+
+
+
+/* INPUTFELTER OG KNAPPER GØRES STØRRE */
+.login__form input,
+.login__form .login__knap {
+    font-size: 1rem;
 }
