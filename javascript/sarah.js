@@ -99,7 +99,7 @@ loginForm.addEventListener("submit", function(event) {
 
     if (loginOK) {
         fejlText.textContent = "";
-        window.location.href = "mine-vagter.html";
+        window.location.href = "mine_vagter.html";
     } else {
         fejlText.textContent = "E-mail eller adgangskode er forkert";
     }
