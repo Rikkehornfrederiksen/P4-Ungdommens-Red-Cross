@@ -5,121 +5,268 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>App Rødekors ungdommen</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            .progress-wrapper {
+                margin: 12px 16px 0;
+                background: #fff5f5;
+                border-radius: 12px;
+                padding: 12px 14px 10px;
+            }
+            .progress-label {
+                font-size: 13px;
+                color: #6b6b6b;
+                margin-bottom: 7px;
+                display: flex;
+                align-items: baseline;
+                gap: 3px;
+                font-family: inherit;
+            }
+            .progress-hours-done {
+                color: #CC0000;
+                font-weight: 600;
+                font-size: 14px;
+                transition: color 0.3s;
+            }
+            .progress-bar-bg {
+                height: 6px;
+                background: rgba(204, 0, 0, 0.15);
+                border-radius: 4px;
+                overflow: hidden;
+                margin-bottom: 7px;
+            }
+            .progress-bar-fill {
+                height: 100%;
+                background: #CC0000;
+                border-radius: 4px;
+                transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .progress-dates {
+                display: flex;
+                justify-content: space-between;
+                font-size: 11px;
+                color: #999;
+            }
+            .card-vagt {
+                cursor: pointer;
+                transition: border-color 0.2s, background 0.2s;
+                user-select: none;
+            }
+            .card-vagt.selected {
+                border-color: rgba(204, 0, 0, 0.4) !important;
+                background: #fff5f5 !important;
+            }
+            .card-vagt.selected .card-vagt__dot--bekræftet {
+                background: #CC0000 !important;
+            }
+            .card-vagt__hours {
+                font-size: 11px;
+                font-weight: 500;
+                color: #999;
+                background: #f0f0f0;
+                border-radius: 6px;
+                padding: 2px 7px;
+                align-self: flex-start;
+                margin-left: auto;
+                white-space: nowrap;
+                transition: background 0.2s, color 0.2s;
+                flex-shrink: 0;
+            }
+            .card-vagt.selected .card-vagt__hours {
+                background: #ffd9d9;
+                color: #CC0000;
+            }
+            .card-vagt__check {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 1.5px solid #ddd;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                align-self: center;
+                transition: all 0.2s;
+                background: white;
+                margin-left: 8px;
+            }
+            .card-vagt__check svg {
+                opacity: 0;
+                transform: scale(0.5);
+                transition: opacity 0.2s, transform 0.2s;
+            }
+            .card-vagt.selected .card-vagt__check {
+                border-color: #CC0000;
+                background: #CC0000;
+            }
+            .card-vagt.selected .card-vagt__check svg {
+                opacity: 1;
+                transform: scale(1);
+            }
+            @keyframes bar-pulse {
+                0%   { box-shadow: 0 0 0 0 rgba(204,0,0,0.35); }
+                70%  { box-shadow: 0 0 0 7px rgba(204,0,0,0); }
+                100% { box-shadow: 0 0 0 0 rgba(204,0,0,0); }
+            }
+            .progress-bar-fill.pulse {
+                animation: bar-pulse 0.45s ease;
+            }
+        </style>
     </head>
-        
-        <body>
-            
-            <header class="app-header">
-                <div class="header-leftside">
-                    <a href="mine_vagter.html" class="brand-button"> 
-                        <img src="images/brand_logo.png" alt="røde kors ungdom forkortet logo" class="logo-img">
-                    </a>
+
+    <body>
+
+        <header class="app-header">
+            <div class="header-leftside">
+                <a href="mine_vagter.html" class="brand-button">
+                    <img src="images/brand_logo.png" alt="røde kors ungdom forkortet logo" class="logo-img">
+                </a>
+            </div>
+            <h1 class="header-title">Overblik</h1>
+            <div class="header-rightside"></div>
+        </header>
+
+        <main class="content-area">
+
+            <div class="progress-wrapper">
+                <div class="progress-label">
+                    Timer:&nbsp;<span class="progress-hours-done" id="hoursDone">0.0</span>&nbsp;/&nbsp;<span id="hoursGoal">20.5</span>
                 </div>
-                <h1 class="header-title">Overblik</h1>
-                <div class="header-rightside"></div>
-            </header>
-
-            <main class="content-area">
-
-
-                <div class="main__menu">
-                  <a href="mine_vagter.html" class="main__menu-item active main__menu-item--active">Mine vagter</a>
-                  <a href="ledige_vagter.html" class="main__menu-item">Ledige vagter</a>
-                  <a href="begivenheder.html" class="main__menu-item">Begivenheder</a>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
                 </div>
+                <div class="progress-dates">
+                    <span>1. Apr 2026</span>
+                    <span>30. Apr 2026</span>
+                </div>
+            </div>
 
-                <section class="overblik-vagter">
-                    
-                    <a href="min-vagt.html" class="card-vagt__link">
-                    <article class="card-vagt">
-                        <p class="card-vagt__date">Ons. 1.<br>April</p>
-                        <div class="card-vagt__line"></div>
-                           <div class="card-vagt__text">
-                              <div class="card-vagt__heading">
-                                 <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
-                                 <h2 class="card-vagt__title">Caféfrivillig</h2>
-                              </div>
-                              <p class="card-vagt__time">14.00-17.00, Netværkshuset</p>
-                              <p class="card-vagt__location">Østre stadionsvej 33<br>5000 Odense C</p>
-                           </div>
-                    </article>
-                    </a>
+            <div class="main__menu">
+                <a href="mine_vagter.html" class="main__menu-item active main__menu-item--active">Mine vagter</a>
+                <a href="ledige_vagter.html" class="main__menu-item">Ledige vagter</a>
+                <a href="begivenheder.html" class="main__menu-item">Begivenheder</a>
+            </div>
 
-                   <article class="card-vagt">
-                        <p class="card-vagt__date">Tors. 2.<br>April</p>
-                        <div class="card-vagt__line"></div>
-                           <div class="card-vagt__text">
-                              <div class="card-vagt__heading">
-                                 <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
-                                 <h2 class="card-vagt__title">Kundebetjening</h2>
-                              </div>
-                              <p class="card-vagt__time">14.00-17.00, Røde Kors</p>
-                              <p class="card-vagt__location">Fjordsgade 9,<br>5000 Odense C</p>
-                           </div>
-                    </article>
+            <section class="overblik-vagter">
 
-                    <article class="card-vagt">
-                        <p class="card-vagt__date">Man. 6.<br>April</p>
-                        <div class="card-vagt__line"></div>
-                           <div class="card-vagt__text">
-                              <div class="card-vagt__heading">
-                                 <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
-                                 <h2 class="card-vagt__title">Kundebetjening</h2>
-                              </div>
-                              <p class="card-vagt__time">10.00-14.00, Røde Kors</p>
-                              <p class="card-vagt__location">Fjordsgade 9,<br>5000 Odense C</p>
-                           </div>
-                    </article>
+                <a href="min-vagt.html" class="card-vagt__link">
+                <article class="card-vagt selected" data-hours="3" onclick="toggleVagt(this, event)">
+                    <p class="card-vagt__date">Ons. 1.<br>April</p>
+                    <div class="card-vagt__line"></div>
+                    <div class="card-vagt__text">
+                        <div class="card-vagt__heading">
+                            <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
+                            <h2 class="card-vagt__title">Caféfrivillig</h2>
+                        </div>
+                        <p class="card-vagt__time">14.00-17.00, Netværkshuset</p>
+                        <p class="card-vagt__location">Østre stadionsvej 33<br>5000 Odense C</p>
+                    </div>
+                    <span class="card-vagt__hours">3t</span>
+                    <div class="card-vagt__check">
+                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </article>
+                </a>
 
-                    <article class="card-vagt">
-                        <p class="card-vagt__date">Fre. 17.<br>April</p>
-                        <div class="card-vagt__line"></div>
-                           <div class="card-vagt__text">
-                              <div class="card-vagt__heading">
-                                 <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
-                                 <h2 class="card-vagt__title">Kundebetjening</h2>
-                              </div>
-                              <p class="card-vagt__time">12.00-15.00, Røde Kors</p>
-                              <p class="card-vagt__location">Fjordsgade 9,<br>5000 Odense C</p>
-                           </div>
-                    </article>
+                <article class="card-vagt selected" data-hours="3" onclick="toggleVagt(this, event)">
+                    <p class="card-vagt__date">Tors. 2.<br>April</p>
+                    <div class="card-vagt__line"></div>
+                    <div class="card-vagt__text">
+                        <div class="card-vagt__heading">
+                            <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
+                            <h2 class="card-vagt__title">Kundebetjening</h2>
+                        </div>
+                        <p class="card-vagt__time">14.00-17.00, Røde Kors</p>
+                        <p class="card-vagt__location">Fjordsgade 9,<br>5000 Odense C</p>
+                    </div>
+                    <span class="card-vagt__hours">3t</span>
+                    <div class="card-vagt__check">
+                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </article>
 
-                    <article class="card-vagt">
-                        <p class="card-vagt__date">Lør. 18.<br>April</p>
-                        <div class="card-vagt__line"></div>
-                           <div class="card-vagt__text">
-                              <div class="card-vagt__heading">
-                                 <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
-                                 <h2 class="card-vagt__title">Kundebetjening</h2>
-                              </div>
-                              <p class="card-vagt__time">14.00-15.00, Røde Kors</p>
-                              <p class="card-vagt__location">Fjordsgade 9,<br>5000 Odense C</p>
-                           </div>
-                    </article>
+                <article class="card-vagt selected" data-hours="4" onclick="toggleVagt(this, event)">
+                    <p class="card-vagt__date">Man. 6.<br>April</p>
+                    <div class="card-vagt__line"></div>
+                    <div class="card-vagt__text">
+                        <div class="card-vagt__heading">
+                            <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
+                            <h2 class="card-vagt__title">Kundebetjening</h2>
+                        </div>
+                        <p class="card-vagt__time">10.00-14.00, Røde Kors</p>
+                        <p class="card-vagt__location">Fjordsgade 9,<br>5000 Odense C</p>
+                    </div>
+                    <span class="card-vagt__hours">4t</span>
+                    <div class="card-vagt__check">
+                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </article>
 
-                </section>
+                <article class="card-vagt selected" data-hours="3" onclick="toggleVagt(this, event)">
+                    <p class="card-vagt__date">Fre. 17.<br>April</p>
+                    <div class="card-vagt__line"></div>
+                    <div class="card-vagt__text">
+                        <div class="card-vagt__heading">
+                            <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
+                            <h2 class="card-vagt__title">Kundebetjening</h2>
+                        </div>
+                        <p class="card-vagt__time">12.00-15.00, Røde Kors</p>
+                        <p class="card-vagt__location">Fjordsgade 9,<br>5000 Odense C</p>
+                    </div>
+                    <span class="card-vagt__hours">3t</span>
+                    <div class="card-vagt__check">
+                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </article>
 
-            </main>
-            
-            <footer class="footer">
-                <nav class="bottom-nav">
-                    <a href="mine_vagter.html" class="nav-buttons">
-                        <img src="images/hjem.png" alt="hjem-button" class="nav-icon">
-                    </a>
-                    
-                    <a href="meddelelser.html" class="nav-buttons">
-                        <img src="images/meddelelser.png" alt="meddelelser-button" class="nav-icon">
-                    </a>
+                <article class="card-vagt selected" data-hours="1" onclick="toggleVagt(this, event)">
+                    <p class="card-vagt__date">Lør. 18.<br>April</p>
+                    <div class="card-vagt__line"></div>
+                    <div class="card-vagt__text">
+                        <div class="card-vagt__heading">
+                            <span class="card-vagt__dot card-vagt__dot--bekræftet"></span>
+                            <h2 class="card-vagt__title">Kundebetjening</h2>
+                        </div>
+                        <p class="card-vagt__time">14.00-15.00, Røde Kors</p>
+                        <p class="card-vagt__location">Fjordsgade 9,<br>5000 Odense C</p>
+                    </div>
+                    <span class="card-vagt__hours">1t</span>
+                    <div class="card-vagt__check">
+                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M1 4L4 7.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </article>
 
-                    <a href="kalender.html" class="nav-buttons">
-                        <img src="images/kalender.png" alt="kalender-button" class="nav-icon">
-                    </a>
+            </section>
 
-                    <a href="min_profil.html" class="nav-buttons">
-                        <img src="images/profil.png" alt="min_profil-button" class="nav-icon">
-                    </a>
-                </nav>
-            </footer>
-            
-        </body>
+        </main>
+
+        <footer class="footer">
+            <nav class="bottom-nav">
+                <a href="mine_vagter.html" class="nav-buttons">
+                    <img src="images/hjem.png" alt="hjem-button" class="nav-icon">
+                </a>
+                <a href="meddelelser.html" class="nav-buttons">
+                    <img src="images/meddelelser.png" alt="meddelelser-button" class="nav-icon">
+                </a>
+                <a href="kalender.html" class="nav-buttons">
+                    <img src="images/kalender.png" alt="kalender-button" class="nav-icon">
+                </a>
+                <a href="min_profil.html" class="nav-buttons">
+                    <img src="images/profil.png" alt="min_profil-button" class="nav-icon">
+                </a>
+            </nav>
+        </footer>
+
+        <script src="javascript/vagter.js"></script>
+
+    </body>
 </html>
