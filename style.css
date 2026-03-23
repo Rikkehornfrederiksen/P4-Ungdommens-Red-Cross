@@ -364,6 +364,319 @@ body.min-vagt-layout {
 }
 
 
+/* Kontaktformular - Liana*/ 
+/* Sparret med AI */
+/* Kilde BEM: https://getbem.com/introduction/ */
+/* Kilde CSS: https://www.w3schools.com/css/css_intro.asp */
+
+/* nulstiller grid fra den fælles css — passer ikke til denne side da der ingen navigation er */
+.frivillig-side {
+  display: block;
+  overflow: auto;
+  height: auto;
+  font-family: Arial, sans-serif;
+  background-color: #FDF0F1;
+  color: #44245E;
+  min-height: 100vh;
+}
+
+/* header med logo — kilde: https://www.w3schools.com/css/css3_flexbox.asp */
+.frivillig-header {
+  background-color: #FDF0F1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 60px;
+}
+
+.frivillig-header__venstre {
+  flex: 0 0 100px;
+}
+
+.frivillig-header__hoejre {
+  flex: 0 0 100px;
+}
+
+.frivillig-header__logo {
+  display: block;
+}
+
+.frivillig-header__logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* scrollbart indholdsområde — kilde: https://www.w3schools.com/css/css_overflow.asp */
+.frivillig-indhold {
+  padding: 20px 16px;
+  background-color: #FDF0F1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* overskrift og tekst centreret — kilde: https://www.w3schools.com/css/css_text.asp */
+.overskrift {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.overskrift__titel {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2D233E;
+  margin-bottom: 10px;
+}
+
+.overskrift__tekst {
+  font-size: 15px;
+  color: #2D233E;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.overskrift__cta {
+  font-size: 15px;
+  color: #2D233E;
+}
+
+/* enkelt felt med plads til fejlbesked under — kilde: https://www.w3schools.com/css/css_form.asp */
+.felt {
+  margin-bottom: 14px;
+}
+
+
+.felt--dobbelt {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.felt--dobbelt .felt {
+  flex: 1;
+  min-width: 0;
+}
+
+.felt__input {
+  width: 100%;
+  padding: 16px 14px;
+  border: 1.5px solid #2D233E;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 15px;
+  color: #2D233E;
+  font-family: inherit;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s;
+}
+
+.felt__input::placeholder {
+  color: #2D233E;
+}
+
+.felt__input:focus {
+  border-color: #2D233E;
+}
+
+
+.felt__input--fejl {
+  border-color: #E30A0B !important;
+}
+
+.felt__textarea {
+  width: 100%;
+  padding: 16px 14px;
+  border: 1.5px solid #2D233E;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 15px;
+  color: #2D233E;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.2s;
+}
+
+.felt__textarea::placeholder {
+  color: #2D233E;
+}
+
+.felt__textarea:focus {
+  border-color: #2D233E;
+}
+
+/* fejlbesked skjult som standard, JS viser den — kilde: https://www.w3schools.com/css/css_display_visibility.asp */
+.fejl {
+  color: #E30A0B;
+  font-size: 13px;
+  margin-top: 4px;
+  display: none;
+}
+
+.fejl--synlig {
+  display: block;
+}
+
+/* dropdown med pil — kilde: https://www.w3schools.com/css/css_positioning.asp */
+.dropdown {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.dropdown__select {
+  width: 100%;
+  padding: 16px 38px 16px 14px;
+  border: 1.5px solid #2D233E;
+  border-radius: 12px;
+  background: #ffffff;
+  font-size: 15px;
+  color: #2D233E;
+  font-family: inherit;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.dropdown__select:focus {
+  border-color: #2D233E;
+}
+
+.dropdown__select--fejl {
+  border-color: #E30A0B !important;
+}
+
+.dropdown__pil {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2D233E;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+/* ja/nej radioknapper */
+.radio-sektion {
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.radio-sektion__spoergsmaal {
+  font-size: 15px;
+  color: #2D233E;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.radio-sektion__gruppe {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.radio-sektion__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: #2D233E;
+  cursor: pointer;
+}
+
+.radio-sektion__label input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #2D233E;
+  cursor: pointer;
+}
+
+/* indsend-knap — kilde: https://www.w3schools.com/css/css3_buttons.asp */
+.frivillig-knap {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #2D233E;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background-color 0.2s;
+}
+
+.frivillig-knap:hover {
+  background-color: #2D233E;
+}
+
+/* popup skjult som standard, JS tilføjer .frivillig-popup--synlig — kilde: https://www.w3schools.com/howto/howto_css_modals.asp */
+.frivillig-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.frivillig-popup--synlig {
+  display: flex !important;
+}
+
+.frivillig-popup__indhold {
+  background: #FDF0F1;
+  border-radius: 16px;
+  padding: 36px 28px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.frivillig-popup__titel {
+  color: #2D233E;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.frivillig-popup__tekst {
+  color: #2D233E;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.frivillig-popup__knap {
+  display: inline-block;
+  background: #2D233E;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  transition: background-color 0.2s;
+}
+
+.frivillig-popup__knap:hover {
+  background-color: #2D233E;
+}
+
 
 
 
@@ -414,3 +727,30 @@ body.min-vagt-layout {
 
 
 }
+
+/* Lianas CSS KODE */
+ 
+  .frivillig-indhold {
+    padding: 30px 40px;
+  }
+  .overskrift__titel {
+    font-size: 24px;
+  }
+
+
+
+
+  .frivillig-indhold {
+    padding: 40px 80px;
+  }
+  .overskrift__titel {
+    font-size: 26px;
+  }
+
+
+
+
+  .felt--dobbelt {
+    flex-direction: column;
+    gap: 0;
+  }

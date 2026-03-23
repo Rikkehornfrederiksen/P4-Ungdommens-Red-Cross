@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bliv frivillig - Ungdommens Røde Kors</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="javascript/liana.js"defer></script>
+</head>
+
+<body class="frivillig-side">
+  <!-- Sparret med AI -->
+  <!-- header med logo — kilde: https://www.w3schools.com/html/html_layout.asp -->
+  <header class="frivillig-header">
+    <div class="frivillig-header__venstre">
+      <a href="mine_vagter.html" class="frivillig-header__logo">
+        <img src="images/brand_logo.png" alt="Ungdommens Røde Kors logo" class="frivillig-header__logo-img">
+      </a>
+    </div>
+    <div class="frivillig-header__hoejre"></div>
+  </header>
+
+  <!-- indhold — kilde: https://www.w3schools.com/html/html_layout.asp -->
+  <main class="frivillig-indhold">
+
+    <!-- overskrift og beskrivelse — kilde: https://www.w3schools.com/html/html_headings.asp -->
+    <div class="overskrift">
+      <h2 class="overskrift__titel">Bliv frivillig</h2>
+      <p class="overskrift__tekst">
+        Hos Ungdommens Røde Kors kan du hjælpe børn og unge gennem aktiviteter
+        som lektiecafé, ferielejr eller Ung På Linje.
+      </p>
+      <p class="overskrift__cta">Bliv en del af fællesskabet i dag!</p>
+    </div>
+
+    <!-- novalidate slår browserens validering fra, JS tager over — kilde: https://www.w3schools.com/html/html_forms.asp -->
+    <form id="frivillig-formular" novalidate>
+
+      <!-- fornavn og efternavn side om side — kilde: https://www.w3schools.com/html/html_form_input_types.asp -->
+      <div class="felt--dobbelt">
+        <div class="felt">
+          <input class="felt__input" type="text" id="fornavn" name="fornavn" placeholder="Fornavn *">
+          <span class="fejl" id="fejl-fornavn">Fornavn er påkrævet</span>
+        </div>
+        <div class="felt">
+          <input class="felt__input" type="text" id="efternavn" name="efternavn" placeholder="Efternavn *">
+          <span class="fejl" id="fejl-efternavn">Efternavn er påkrævet</span>
+        </div>
+      </div>
+
+      <!-- alder -->
+      <div class="felt">
+        <input class="felt__input" type="text" id="alder" name="alder" placeholder="Alder *">
+        <span class="fejl" id="fejl-alder">Alder skal være mellem 15 og 99</span>
+      </div>
+
+      <!-- email -->
+      <div class="felt">
+        <input class="felt__input" type="email" id="email" name="email" placeholder="E-mail *">
+        <span class="fejl" id="fejl-email">Indtast en gyldig e-mailadresse</span>
+      </div>
+
+      <!-- telefon -->
+      <div class="felt">
+        <input class="felt__input" type="tel" id="telefon" name="telefon" placeholder="Telefon *">
+        <span class="fejl" id="fejl-telefon">Telefon er påkrævet</span>
+      </div>
+
+      <!-- postnr og by side om side -->
+      <div class="felt--dobbelt">
+        <div class="felt">
+          <input class="felt__input" type="text" id="postnr" name="postnr" placeholder="Postnr. *">
+          <span class="fejl" id="fejl-postnr">Postnr. er påkrævet</span>
+        </div>
+        <div class="felt">
+          <input class="felt__input" type="text" id="by" name="by" placeholder="By *">
+          <span class="fejl" id="fejl-by">By er påkrævet</span>
+        </div>
+      </div>
+
+      <!-- valgfrit tekstfelt — kilde: https://www.w3schools.com/tags/tag_textarea.asp -->
+      <div class="felt">
+        <textarea class="felt__textarea" id="besked" name="besked"
+          placeholder="Fortæl kort, hvorfor du har lyst til at være frivillig"></textarea>
+      </div>
+
+      <!-- dropdown til aktivitet — kilde: https://www.w3schools.com/tags/tag_select.asp -->
+      <div class="dropdown">
+        <select class="dropdown__select" id="aktivitet" name="aktivitet">
+          <option value="" disabled selected>Vælg hvilken aktivitet du kunne tænke dig at være frivillig i fra listen</option>
+          <option value="krisecenter">Krisecenter</option>
+          <option value="mentoring">Mentoring</option>
+          <option value="hospitalcafe">Hospitalcafé</option>
+          <option value="born-ungehjem">Børne- og ungehjem</option>
+          <option value="sikrede">Sikrede institutioner</option>
+          <option value="asyl">Asyl</option>
+          <option value="klub">Klub</option>
+          <option value="lektiecafe">Lektiecafé</option>
+          <option value="lokalafdeling">Lokalafdeling</option>
+          <option value="hoere-mere">Jeg vil bare gerne høre mere</option>
+          <option value="andet">Andet</option>
+        </select>
+        <span class="dropdown__pil">▾</span>
+        <span class="fejl" id="fejl-aktivitet">Vælg venligst en aktivitet</span>
+      </div>
+
+      <!-- radioknapper — kilde: https://www.w3schools.com/html/html_form_input_types.asp -->
+      <div class="radio-sektion">
+        <p class="radio-sektion__spoergsmaal">
+          Er eller har du tidligere været frivillig i<br>Ungdommens Røde Kors?
+        </p>
+        <div class="radio-sektion__gruppe">
+          <label class="radio-sektion__label">
+            Ja
+            <input type="radio" name="tidligere" value="ja">
+          </label>
+          <label class="radio-sektion__label">
+            Nej
+            <input type="radio" name="tidligere" value="nej">
+          </label>
+        </div>
+      </div>
+
+      <!-- knap med id="indsend-knap" så JS kan finde den — kilde: https://www.w3schools.com/tags/tag_button.asp -->
+      <button class="frivillig-knap" type="button" id="indsend-knap">Bliv frivillig</button>
+
+    </form>
+  </main>
+
+  <!-- popup skjult med CSS, JS viser den — kilde: https://www.w3schools.com/howto/howto_css_modals.asp -->
+  <div class="frivillig-popup" id="popup">
+    <div class="frivillig-popup__indhold">
+      <h2 class="frivillig-popup__titel">Tak for din interesse!</h2>
+      <p class="frivillig-popup__tekst">
+        Tak for din interesse i at blive frivillig hos Ungdommens Røde Kors.
+        Vi er glade for din interesse og kontakter dig hurtigst muligt.
+      </p>
+      <a class="frivillig-popup__knap" href="index.html">Gå til forsiden</a>
+    </div>
+  </div>
+
+</body>
+</html>
