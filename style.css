@@ -87,6 +87,7 @@ body {
 
 
 
+
 /* SARAH'S CSS KODE */
 /* Sarah: Brugt ChatGPT til at samle to CSS filer til én (prompt 30) */
 /* Sarah's kodedel - LAYOUT AF LOGIN SIDE */
@@ -365,6 +366,7 @@ body.min-vagt-layout {
 
 
 
+
 /* Kode lavet fra dem som vi har fået fonten fra, ændret af ai */
 @font-face {
 	font-family: 'JeanLucWeb-Bold';
@@ -389,10 +391,7 @@ body.min-vagt-layout {
 }
 
 
-
 /* SARAH'S CSS KODE */
-/* AI brugt til denne kode, refere til dokument AI prompt Rikke */
-
 
 /* LOGO STØRRELSE */
 .login__logo {
@@ -414,3 +413,5 @@ body.min-vagt-layout {
 .login__form .login__knap {
     font-size: 1rem;
 }
+
+
