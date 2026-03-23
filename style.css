@@ -725,26 +725,16 @@ body.min-vagt-layout {
     font-size: 1rem;
 }
 
-
-
-
 /* Lianas CSS KODE */
- 
-  .frivillig-indhold {
+.frivillig-indhold {
     padding: 30px 40px;
   }
-
   .overskrift__titel {
     font-size: 24px;
   }
-  
-  .felt--dobbelt {
-    flex-direction: column;
-    gap: 0;
-  }
 }
 
-
+/* Lianas CSS KODE */
 @media (min-width: 1024px) {
   .frivillig-indhold {
     padding: 40px 80px;
