@@ -14,9 +14,8 @@ body {
     height: 100vh;
     width: 100%;
     margin: 0;
-    overflow: auto;
+    overflow: auto; /*eða hidden*/
 }
-
 
 /* kode er lavet med inspiration og refernce fra https://www.w3schools.com/css/css3_flexbox.asp*/
 .app-header {
@@ -40,12 +39,14 @@ body {
    width: auto;
 }
 
-
+/* Brugt AI*/
 .header-title {
-    font-size: 1.1rem; 
+    font-size: 2rem; 
     flex-grow: 1;
     text-align: center;
+    font-family: "roboto regular";
     font-weight: bold;
+    color: rgb(68,36,94);
 }
 
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
@@ -803,6 +804,166 @@ body.min-vagt-layout {
     background-color:#E30A0B ;
 }
 
+/* Bára CSS*/
+/* lavet med ai til at få main til at scroll og header/footer er sticky*/
+main {
+    min-height: 0;
+    overflow-y: auto;
+}
+
+/*AI hjælper med at lave alle card classes*/
+.overblik-vagter{
+    display: grid;
+    gap: 1rem;
+    padding-top: 1rem;
+    }
+
+.card-vagt{
+    display: grid;
+    grid-template-columns: 120px 2px 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    border: 2px solid rgb(68, 36, 94);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.card-vagt__date{
+    font-family: "roboto regular";
+    font-size: 1.5rem;
+    color: rgb(68, 36, 94);
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-vagt__line{
+    width: 2px;
+    height: 80%;
+    background-color: rgb(68, 36, 94);
+}
+
+.card-vagt__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.card-vagt__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding-left: 1.2rem;
+    font-family: "roboto regular";
+    font-size: 1rem;
+    color: rgb(68, 36, 94);
+    min-width: 0;
+}
+
+.card-vagt__heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.card-vagt__dot {
+    position: absolute;
+    left: -1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+}
+
+.card-vagt__dot--bekræftet {
+    background-color: rgb(45, 219, 36);
+}
+
+.card-vagt__title {
+    font-family: "roboto regular";
+    font-size: 1.2rem;
+    color: rgb(68, 36, 94);
+    margin: 0;
+}
+
+.card-vagt__time{
+    font-family: "roboto regular";
+    font-size: 1rem;
+    color: rgb(68, 36, 94);
+    margin: 0;
+}
+
+.card-vagt__location{
+    font-family: "roboto regular";
+    font-size: 1rem;
+    color: rgb(68, 36, 94);
+    margin: 0;
+}
+
+.card-vagt__button {
+    align-self: center;
+    font-family: "roboto regular";
+    font-size: 1.5rem;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 0, 0);
+    padding: 0.2rem 1rem;
+    min-width: 7.5rem;
+}
+
+/*lavet med hjælp af AI hvordan man bruger modifier ift. state og JS*/
+.card-vagt--anmodet .card-vagt__dot { /*parent state --anmodet child state er block og element*/
+    background-color: orange;
+}
+.card-vagt--anmodet .card-vagt__button {
+    color: rgb(68, 36, 94);
+    background-color: orange; 
+    border: 1px solid orange;
+}
+
+.footer{
+   background-color: #FFF0F0; 
+}
+
+/* Brugt mine noter til BEM og flex, AI til at hjælpe med andre, det er til ALLE main menu */
+.main__menu {
+    display: flex;
+    justify-content: space-evenly; /*lárétt*/
+    align-items: center; /*centrað lóðrétt*/
+}
+.main__menu-item {
+    font-family: "roboto regular";
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(68, 36, 94);
+    text-decoration: none; /* fjerner underline, da det er default når man har en a href link*/
+    position: relative; /* passer på at den røde streg placerer sig i forhold til teksten */
+    transition: transform 0.2s ease;
+}
+.main__menu-item::after {
+    content: ""; /* er brugt med pseudo-elements og betyder "lave en tomt element", så har jeg ikke brug for ekstra div i html til at ha rød strejg*/
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    width: 0; /* starter skjult, så stregen kun vises ved hover eller active */
+    height: 0.12rem;
+    background-color: red;
+    transition: width 0.3s ease; /* gør at stregen glider blødt ud */
+}
+.main__menu-item:hover {
+    transform: scale(1.10); /*gør det større om 10%*/
+}
+.main__menu-item:hover::after {
+    width: 100%;
+    font-weight: bold;
+}
+.main__menu-item--active::after {
+    width: 100%;
+}
 
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
 @media (min-width: 600px) {
