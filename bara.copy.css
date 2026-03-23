@@ -51,7 +51,7 @@ main {
     font-size: 2rem; 
     flex-grow: 1;
     text-align: center;
-    font-family: 'JeanLucWeb-Bold', sans-serif;
+    font-family: "roboto bold";
     color: rgb(68,36,94);
 }
 
@@ -250,12 +250,6 @@ main {
     width: 50px; 
     height: 50px;
     object-fit: contain;
-}
-
-/* Kode lavet fra dem som vi har fået fonten fra, ændret af ai */
-@font-face {
-	font-family: 'JeanLucWeb-Bold';
-    src: url("fonts/jeanlucweb-bold.woff") format("woff");
 }
 
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
