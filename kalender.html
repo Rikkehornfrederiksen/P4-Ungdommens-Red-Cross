@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>App Rødekors ungdommen</title>
         <link rel="stylesheet" href="style.css">
-        <script src="javascript/rikke.js"></script>
+        <script src="javascript/rikke.js" defer></script>
        
         
     </head>
@@ -22,8 +22,48 @@
                 <div class="header-rightside"></div>
             </header>
 
-                <main>
+                 <main>
+                    <div class="calender">
+                        <div class="calender_header">
+                           
+                           <h2 id="monthYear">Marts 2026</h2>
+                           
+                        </div>
+                       <!--kode inspireret fra https://www.w3schools.com/howto/howto_css_calendar.asp-->
+                     <div class="calender-weekday">
+                        <span>Man</span>
+                        <span>Tir</span>
+                        <span>Ons</span>
+                        <span>Tor</span>
+                        <span>Fre</span>
+                        <span>Lør</span>
+                        <span>Søn</span>
+                        </div>    
                     
+                        <ul id="daysContainer"></ul>
+                    </div>
+                        <!--kode inspireret med Ai prompt (6) linje 46-61-->
+                      <div class="status-container">
+                        <div class="status-items">
+                            <span class="dot green"></span>
+                            <span class="status-text">Mine vagter</span>
+                        </div>
+
+                        <div class="status-items">
+                            <span class="dot yellow"></span>
+                            <span class="status-text">Afvent vagter</span>
+                        </div>
+
+                        <div class="status-items">
+                            <span class="dot red"></span>
+                            <span class="status-text">Ledige vagter</span>
+                        </div>
+                    </div>
+
+                    <div id="eventBox" class="event-box">
+                        Vælg en dag
+                    </div>
+                      
                 </main>
                     
                 

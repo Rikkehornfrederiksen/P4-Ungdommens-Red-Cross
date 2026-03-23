@@ -677,14 +677,132 @@ body.min-vagt-layout {
   background-color: #2D233E;
 }
 
-
-
-
-/* Kode lavet fra dem som vi har fået fonten fra, ændret af ai */
-@font-face {
-	font-family: 'JeanLucWeb-Bold';
-    src: url("../fonts/jeanlucweb-bold.woff") format("woff");
+/*Rikkes css kode*/
+.nav-icon {
+    width: 50px; 
+    height: 50px;
+    object-fit: contain;
 }
+.calender {
+    width: 95%;
+    max-width: 900px;
+    margin: 20px auto;
+    background:#FFF0F0;
+    border-radius: 20px;
+    padding: 20px;
+}
+.calender_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*font-family:*/ 
+    color:#2D233E ;
+    font-weight: bold;
+    font-size: 20px;
+}
+.calender_nav {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color:red;
+    margin: 20px;
+    
+}
+.calender-weekday {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    font-family: "roboto regular";
+    color: #2D233E;
+}
+.calender_day{
+    padding: 10px;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    font-size: 15px;
+    min-height: 40px;
+}
+
+.calender_day--active {
+    background:#2D233E;
+    color: white;
+}
+.caleder_dot {
+    width: 10px;
+    height: 10px;
+    background: green;
+     border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* EVENT BOX */
+.event-box {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    font-family: "roboto regular";
+    color: #2D233E;
+    font-size: 20px;
+}
+#daysContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+/*Ai prompt (6) fra linje 169-206 Rikke*/ 
+.calender_day_empty {
+    padding: 10px;
+    background: transparent;
+}
+.status-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    
+}
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+.status-text {
+    font-family: "roboto regular";
+    font-size: 14px;
+    color: #2D233E;
+
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.green {
+    background-color:#2DDB24 ;
+}
+.yellow {
+    background-color: #FFAE00;
+}
+.red {
+    background-color:#E30A0B ;
+}
+
 
 /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
 @media (min-width: 600px) {
@@ -750,4 +868,39 @@ body.min-vagt-layout {
     flex-direction: column;
     gap: 0;
   }
+}
+
+/*Rikkes media kode*/
+@media (min-width: 600px) {
+    .calender_day {
+        padding: 20px;
+        font-size: 20px;
+        min-height: 80px;
+    }
+    .calender_header {
+        font-size: 24px;
+    }
+}
+@media (min-width: 600px) {
+    .status-container {
+        gap: 40px;
+    }
+    .dot {
+        width: 20px;
+        height: 20px;
+    }
+    .status-text {
+        font-size: 24px;
+    }
+}
+@media (min-width: 600px) {
+    .event-box {
+        font-size: 24px;
+    }
+}
+@media (min-width: 600px) {
+    .brand-button img {
+        height: 60px;
+        width: auto;
+    }
 }
