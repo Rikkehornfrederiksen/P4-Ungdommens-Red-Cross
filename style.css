@@ -726,15 +726,21 @@ body.min-vagt-layout {
 }
 
 
-}
+
 
 /* Lianas CSS KODE */
-@media (min-width: 600px) {
+ 
   .frivillig-indhold {
     padding: 30px 40px;
   }
+
   .overskrift__titel {
     font-size: 24px;
+  }
+
+  .felt--dobbelt {
+    flex-direction: column;
+    gap: 0;
   }
 }
 
@@ -745,13 +751,5 @@ body.min-vagt-layout {
   }
   .overskrift__titel {
     font-size: 26px;
-  }
-}
-
-
-@media (max-width: 400px) {
-  .felt--dobbelt {
-    flex-direction: column;
-    gap: 0;
   }
 }
