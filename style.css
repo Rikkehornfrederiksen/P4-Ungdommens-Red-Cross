@@ -685,6 +685,7 @@ body.min-vagt-layout {
     height: 50px;
     object-fit: contain;
 }
+/* koderne fra 688-747 inspireret fra https://www.w3schools.com/howto/howto_css_calendar.asp*/
 .calender {
     width: 95%;
     max-width: 900px;
@@ -697,7 +698,7 @@ body.min-vagt-layout {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*font-family:*/ 
+    font-family: Arial, sans-serif; 
     color:#2D233E ;
     font-weight: bold;
     font-size: 20px;
@@ -720,6 +721,7 @@ body.min-vagt-layout {
     font-family: Arial, sans-serif;
     color: #2D233E;
 }
+/* kode inspireret af https://www.w3schools.com/htmlcss/htmlcss_tooling.asp*/
 .calender__day{
     padding: 10px;
     text-align: center;
@@ -746,7 +748,7 @@ body.min-vagt-layout {
     transform: translateX(-50%);
 }
 
-/* EVENT BOX */
+/* EVENT BOX inspiration fra https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_model*/
 .event-box {
     margin-top: 15px;
     padding: 10px;
@@ -757,6 +759,7 @@ body.min-vagt-layout {
     color: #2D233E;
     font-size: 20px;
 }
+/* kode inspireret fra https://www.w3schools.com/css/css_grid.asp*/
 #daysContainer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
