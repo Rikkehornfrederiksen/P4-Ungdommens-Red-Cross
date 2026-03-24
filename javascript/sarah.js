@@ -13,9 +13,6 @@ const kodeInput = document.querySelector(".login__input--kode");
 const loginForm = document.querySelector(".login__form");
 const fejlText = document.querySelector(".login__fejl");
 
-// VARIABLER OG TYPER
-let email; // string
-let kode;  // string
 
 // Sarah: Jeg har fundet inspiration fra mit eget array fra JavaScript real-life (prompt 10)
 // ARRAYS OG OBJEKTER
