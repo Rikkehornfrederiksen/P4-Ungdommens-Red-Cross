@@ -29,12 +29,12 @@ body {
  
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+
 .brand-button {
     flex: 0 0 100px;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+
 .brand-button img {
    height: 50px;
    width: auto;
@@ -50,7 +50,7 @@ body {
     color: rgb(68,36,94);
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+/*kode er inspireret fra https://www.w3schools.com/cssref/sel_after.php*/
 .app-header::after {
     content: "";
     flex: 0 0 50px; 
@@ -60,7 +60,7 @@ body {
     grid-row: 2;
     padding: 20px;
     background-color: #ffffff;
-    /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+    /*AI brugt til denne kode, refere til dokument AI prompt (9) Rikke*/
     -webkit-overflow-scrolling: touch;
 }
 
@@ -218,12 +218,12 @@ body.min-vagt-layout {
     padding: 0 5%;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+
 .brand-button {
     flex: 0 0 100px;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+
 .brand-button img {
     height: 50px;
     width: auto;
@@ -236,7 +236,7 @@ body.min-vagt-layout {
     font-weight: bold;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+/*AI prompt (10)*/
 .app-header::after {
     content: "";
     flex: 0 0 50px;
@@ -256,7 +256,7 @@ body.min-vagt-layout {
     align-items: center;
     background-color: #FFF0F0;
 }
-
+/* kode inspireret fra https://www.w3schools.com/howto/howto_css_more_button.asp*/
 .nav-buttons {
     flex: 1;
     display: flex;
@@ -733,6 +733,7 @@ body.min-vagt-layout {
     background:#2D233E;
     color: white;
 }
+/*Ai prompt (6)*/
 .caleder__dot {
     width: 10px;
     height: 10px;
@@ -764,7 +765,7 @@ body.min-vagt-layout {
     padding: 0;
     margin: 20px;
 }
-/*Ai prompt (6) fra linje 169-206 Rikke*/ 
+
 .calender__day_empty {
     padding: 10px;
     background: transparent;
@@ -788,6 +789,7 @@ body.min-vagt-layout {
     color: #2D233E;
 
 }
+/*Ai prompt (6) fra linje 792-805 Rikke*/ 
 .dot {
     width: 10px;
     height: 10px;
@@ -803,6 +805,7 @@ body.min-vagt-layout {
 .red {
     background-color:#E30A0B ;
 }
+/*Ai prompt (7)*/
 .service-besked {
     margin: 20px;
     background-color: #FFF0F1;

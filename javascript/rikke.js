@@ -53,7 +53,7 @@ function generateCalendar(){
         day.classList.add("calender__day"); 
         day.innerText = i;
 
-       //kode inspireret fra https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach og AI(3)
+       //kode inspireret fra https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach og AI(3) og (8)
         events.forEach(event => {
             if(event.day === i){
                 let dot = document.createElement("div");
@@ -62,7 +62,7 @@ function generateCalendar(){
             }
         });
 
-       //AI (4) og inspiration fra https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+       //AI (4) og  og inspiration fra https://www.w3schools.com/jsref/met_element_addeventlistener.asp
         day.addEventListener("click", function(){
             //inspiration fra https://www.w3schools.com/jsref/met_document_queryselectorall.asp
             document.querySelectorAll(".calender__day")
