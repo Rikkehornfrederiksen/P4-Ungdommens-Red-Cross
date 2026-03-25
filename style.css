@@ -1,6 +1,7 @@
 *{ /*Reference fra baramjollragnheidardottir-sketch
 presentation Github*/
-   
+
+/*css er valideret med https://jigsaw.w3.org/css-validator/validator, der er ingen errors eller warnings*/
 box-sizing: border-box;
     margin: 0;
     padding: 0;    
@@ -28,12 +29,12 @@ body {
  
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+
 .brand-button {
     flex: 0 0 100px;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+
 .brand-button img {
    height: 50px;
    width: auto;
@@ -44,12 +45,12 @@ body {
     font-size: 2rem; 
     flex-grow: 1;
     text-align: center;
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     font-weight: bold;
     color: rgb(68,36,94);
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+/*kode er inspireret fra https://www.w3schools.com/cssref/sel_after.php*/
 .app-header::after {
     content: "";
     flex: 0 0 50px; 
@@ -59,7 +60,7 @@ body {
     grid-row: 2;
     padding: 20px;
     background-color: #ffffff;
-    /*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+    /*AI brugt til denne kode, refere til dokument AI prompt (9) Rikke*/
     -webkit-overflow-scrolling: touch;
 }
 
@@ -113,9 +114,9 @@ body {
 }
 
 .login-layout {
-    display: grid; /* Grid layout til hele siden */
-    grid-template-rows: auto 1fr auto; /* Auto = header får den rette højde, 1fr = main fylder resten af pladsen, auto = footer får sin naturlige højde. */
-    min-height: 100vh; /* Sikrer at siden altid fylder mindst hele skærmens højde */
+    display: grid; 
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh; 
 }
 
 
@@ -123,14 +124,13 @@ body {
 /* HEADER */
 .login-header {
     display: flex;
-    justify-content: center; /* Centrerer indholdet horisontalt */
+    justify-content: center; 
     padding: 1.25rem;
 }
 
 
 /* Sarah: Jeg har brugt ChatGPT til sparring om BEM (prompt 6) */
 /* Sarah: Jeg har brugt ChatGPT til sparring om rem (prompt 7)*/
-/* BLOK */
 .login-layout main {
     display: flex;
     justify-content: center;
@@ -144,7 +144,6 @@ body {
 }
 
 
-/* ELEMENTER */
 .login__logo {
     width: 18.75rem;
     display: block;
@@ -154,7 +153,6 @@ body {
 
 
 /* LOGIN FORMULAR */
-/* Flexbox bruges til at stable inputfelter og knapper ovenpå hinanden. */
 .login__form {
     display: flex;
     flex-direction: column; 
@@ -175,20 +173,19 @@ body {
 }
 
 
-/* MODIFIERS */
-.login__knap--primary { /* Log ind knap */
+.login__knap--primary { 
     background-color: #e30a0b;
     color: white;
 }
 
-.login__knap--secondary { /* Bliv frivillig knap */
+.login__knap--secondary { 
     background-color: #2d233e;
     color: white;
     text-decoration: none;
     text-align: center;
 }
 
-.login__fejl { /* Fejlmeddelelse */
+.login__fejl { 
     color:#e30a0b;
     font-size: 0.8rem;
     margin-bottom: 10px;
@@ -221,12 +218,12 @@ body.min-vagt-layout {
     padding: 0 5%;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+
 .brand-button {
     flex: 0 0 100px;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+
 .brand-button img {
     height: 50px;
     width: auto;
@@ -239,7 +236,7 @@ body.min-vagt-layout {
     font-weight: bold;
 }
 
-/*AI brugt til denne kode, refere til dokument AI prompt Rikke*/
+/*AI prompt (10)*/
 .app-header::after {
     content: "";
     flex: 0 0 50px;
@@ -259,7 +256,7 @@ body.min-vagt-layout {
     align-items: center;
     background-color: #FFF0F0;
 }
-
+/* kode inspireret fra https://www.w3schools.com/howto/howto_css_more_button.asp*/
 .nav-buttons {
     flex: 1;
     display: flex;
@@ -294,7 +291,7 @@ body.min-vagt-layout {
     font-size: 0.75rem;
 }
 
-/* SECTIONS */
+/* SECTION */
 .content-area section {
     margin-bottom: 20px;
     padding: 20px;
@@ -684,6 +681,7 @@ body.min-vagt-layout {
     height: 50px;
     object-fit: contain;
 }
+/* koderne fra 688-747 inspireret fra https://www.w3schools.com/howto/howto_css_calendar.asp*/
 .calender {
     width: 95%;
     max-width: 900px;
@@ -696,7 +694,7 @@ body.min-vagt-layout {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*font-family:*/ 
+    font-family: Arial, sans-serif; 
     color:#2D233E ;
     font-weight: bold;
     font-size: 20px;
@@ -716,10 +714,11 @@ body.min-vagt-layout {
     margin: 20px 0;
     text-align: center;
     font-weight: bold;
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     color: #2D233E;
 }
-.calender_day{
+/* kode inspireret af https://www.w3schools.com/htmlcss/htmlcss_tooling.asp*/
+.calender__day{
     padding: 10px;
     text-align: center;
     border-radius: 100px;
@@ -730,11 +729,12 @@ body.min-vagt-layout {
     min-height: 40px;
 }
 
-.calender_day--active {
+.calender__day--active {
     background:#2D233E;
     color: white;
 }
-.caleder_dot {
+/*Ai prompt (6)*/
+.caleder__dot {
     width: 10px;
     height: 10px;
     background: green;
@@ -745,17 +745,18 @@ body.min-vagt-layout {
     transform: translateX(-50%);
 }
 
-/* EVENT BOX */
+/* EVENT BOX inspiration fra https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_model*/
 .event-box {
     margin-top: 15px;
     padding: 10px;
     border-radius: 10px;
     background: white;
     border: 1px solid #ccc;
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     color: #2D233E;
     font-size: 20px;
 }
+/* kode inspireret fra https://www.w3schools.com/css/css_grid.asp*/
 #daysContainer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -764,8 +765,8 @@ body.min-vagt-layout {
     padding: 0;
     margin: 20px;
 }
-/*Ai prompt (6) fra linje 169-206 Rikke*/ 
-.calender_day_empty {
+
+.calender__day_empty {
     padding: 10px;
     background: transparent;
 }
@@ -783,11 +784,12 @@ body.min-vagt-layout {
     gap: 80px;
 }
 .status-text {
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     font-size: 14px;
     color: #2D233E;
 
 }
+/*Ai prompt (6) fra linje 792-805 Rikke*/ 
 .dot {
     width: 10px;
     height: 10px;
@@ -802,6 +804,27 @@ body.min-vagt-layout {
 }
 .red {
     background-color:#E30A0B ;
+}
+/*Ai prompt (7)*/
+.service-besked {
+    margin: 20px;
+    background-color: #FFF0F1;
+    border-radius: 12px;
+    color: #2D233E;
+    font-family: Arial, sans-serif;
+    text-align: center;
+   
+}
+.service-besked__title {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.service-besked__text {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.4;
 }
 
 /* Bára CSS*/
@@ -833,7 +856,7 @@ main {
     display: block;
 }
 .card-vagt__date{
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif ;
     font-size: 1.5rem;
     color: rgb(68, 36, 94);
     font-weight: bold;
@@ -859,7 +882,7 @@ main {
     flex-direction: column;
     gap: 0.15rem;
     padding-left: 1.2rem;
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     font-size: 1rem;
     color: rgb(68, 36, 94);
     min-width: 0;
@@ -887,21 +910,21 @@ main {
 }
 
 .card-vagt__title {
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     font-size: 1.2rem;
     color: rgb(68, 36, 94);
     margin: 0;
 }
 
 .card-vagt__time{
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     font-size: 1rem;
     color: rgb(68, 36, 94);
     margin: 0;
 }
 
 .card-vagt__location{
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     font-size: 1rem;
     color: rgb(68, 36, 94);
     margin: 0;
@@ -909,7 +932,7 @@ main {
 
 .card-vagt__button {
     align-self: center;
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     font-size: 1.5rem;
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
@@ -940,7 +963,7 @@ main {
     align-items: center; /*centrað lóðrétt*/
 }
 .main__menu-item {
-    font-family: "roboto regular";
+    font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
     color: rgb(68, 36, 94);
@@ -987,22 +1010,17 @@ main {
 
 /* SARAH'S CSS KODE */
 
-/* LOGO STØRRELSE */
 .login__logo {
     width: 22rem;
     padding-bottom: 3rem;
 }
 
 
-
-/* LOGIN CONTAINER GØRES BREDERE */
 .login {
     max-width: 30rem;
 }
 
 
-
-/* INPUTFELTER OG KNAPPER GØRES STØRRE */
 .login__form input,
 .login__form .login__knap {
     font-size: 1rem;
@@ -1067,5 +1085,13 @@ main {
     .brand-button img {
         height: 60px;
         width: auto;
+    }
+}
+@media (min-width: 600px) {
+    .service-besked {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        font-size: 15px;
     }
 }

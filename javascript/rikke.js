@@ -50,25 +50,25 @@ function generateCalendar(){
         //kode inspireret fra https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
         //Ai (2)
         let day = document.createElement("li");
-        day.classList.add("calender_day"); 
+        day.classList.add("calender__day"); 
         day.innerText = i;
 
-       //kode inspireret fra https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach og AI(3)
+       //kode inspireret fra https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach og AI(3) og (8)
         events.forEach(event => {
             if(event.day === i){
                 let dot = document.createElement("div");
-                dot.classList.add("caleder_dot"); 
+                dot.classList.add("caleder__dot"); 
                 day.appendChild(dot);
             }
         });
 
-       //AI (4) og inspiration fra https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+       //AI (4) og  og inspiration fra https://www.w3schools.com/jsref/met_element_addeventlistener.asp
         day.addEventListener("click", function(){
             //inspiration fra https://www.w3schools.com/jsref/met_document_queryselectorall.asp
-            document.querySelectorAll(".calender_day")
-                .forEach(d => d.classList.remove("calender_day--active"));
+            document.querySelectorAll(".calender__day")
+                .forEach(d => d.classList.remove("calender__day--active"));
             
-            day.classList.add("calender_day--active");
+            day.classList.add("calender__day--active");
 
             let eventForDay = events.find(e => e.day === i);
 

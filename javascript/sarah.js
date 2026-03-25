@@ -1,13 +1,9 @@
 // Sarah: Jeg har researchet og undersøgt, hvordan w3schools laver loginform (prompt 8)
 // DEBUGGING
-// Viser brug af console.log til fejlfinding
 console.log("Test");
 
 // Sarah: Jeg har sparret med ChatGPT i forbindelse med DOM (prompt 9 og 18)
 // DOM
-// document = hele HTML siden
-// getElementById = finder element via id
-// querySelector = finder via class
 const emailInput = document.querySelector(".login__input--email");
 const kodeInput = document.querySelector(".login__input--kode");
 const loginForm = document.querySelector(".login__form");
@@ -62,17 +58,14 @@ let brugere = [
 
 // Sarah: Jeg har sparret med ChatGPT i forbindelse med funktion, loop og if/else (prompt 12)
 // FUNKTION
-function checkLogin(email, kode) { // function = opret funktion, email+kode = parametre
+function checkLogin(email, kode) { 
 
     // LOOPS
-    // Inde i funktionen
     for (let i = 0; i < brugere.length; i++) { 
 
 
         // IF/ELSE + OPERATORER
-        // Her tjekker vi login
-        // Inde i loopet
-        if (brugere[i].email === email && brugere[i].kode === kode) { // === betyder helt ens, && betyder OG
+        if (brugere[i].email === email && brugere[i].kode === kode) { 
             return true;
         }
 
@@ -83,8 +76,6 @@ function checkLogin(email, kode) { // function = opret funktion, email+kode = pa
 
 // Sarah: Jeg har sparret med ChatGPT i forbindelse med reload af siden og til redirect (prompt 15 og 16)
 // EVENTS
-// Når brugeren klikker
-
 loginForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
