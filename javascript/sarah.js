@@ -58,14 +58,14 @@ let brugere = [
 
 // Sarah: Jeg har sparret med ChatGPT i forbindelse med funktion, loop og if/else (prompt 12)
 // FUNKTION
-function checkLogin(email, kode) { // function = opret funktion, email+kode = parametre
+function checkLogin(email, kode) { 
 
     // LOOPS
     for (let i = 0; i < brugere.length; i++) { 
 
 
         // IF/ELSE + OPERATORER
-        if (brugere[i].email === email && brugere[i].kode === kode) { // === betyder helt ens, && betyder OG
+        if (brugere[i].email === email && brugere[i].kode === kode) { 
             return true;
         }
 
