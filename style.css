@@ -114,9 +114,9 @@ body {
 }
 
 .login-layout {
-    display: grid; /* Grid layout til hele siden */
-    grid-template-rows: auto 1fr auto; /* Auto = header får den rette højde, 1fr = main fylder resten af pladsen, auto = footer får sin naturlige højde. */
-    min-height: 100vh; /* Sikrer at siden altid fylder mindst hele skærmens højde */
+    display: grid; 
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh; 
 }
 
 
@@ -124,14 +124,13 @@ body {
 /* HEADER */
 .login-header {
     display: flex;
-    justify-content: center; /* Centrerer indholdet horisontalt */
+    justify-content: center; 
     padding: 1.25rem;
 }
 
 
 /* Sarah: Jeg har brugt ChatGPT til sparring om BEM (prompt 6) */
 /* Sarah: Jeg har brugt ChatGPT til sparring om rem (prompt 7)*/
-/* BLOK */
 .login-layout main {
     display: flex;
     justify-content: center;
@@ -145,7 +144,6 @@ body {
 }
 
 
-/* ELEMENTER */
 .login__logo {
     width: 18.75rem;
     display: block;
@@ -155,7 +153,6 @@ body {
 
 
 /* LOGIN FORMULAR */
-/* Flexbox bruges til at stable inputfelter og knapper ovenpå hinanden. */
 .login__form {
     display: flex;
     flex-direction: column; 
@@ -176,20 +173,19 @@ body {
 }
 
 
-/* MODIFIERS */
-.login__knap--primary { /* Log ind knap */
+.login__knap--primary { 
     background-color: #e30a0b;
     color: white;
 }
 
-.login__knap--secondary { /* Bliv frivillig knap */
+.login__knap--secondary { 
     background-color: #2d233e;
     color: white;
     text-decoration: none;
     text-align: center;
 }
 
-.login__fejl { /* Fejlmeddelelse */
+.login__fejl { 
     color:#e30a0b;
     font-size: 0.8rem;
     margin-bottom: 10px;
@@ -295,7 +291,7 @@ body.min-vagt-layout {
     font-size: 0.75rem;
 }
 
-/* SECTIONS */
+/* SECTION */
 .content-area section {
     margin-bottom: 20px;
     padding: 20px;
@@ -1011,22 +1007,17 @@ main {
 
 /* SARAH'S CSS KODE */
 
-/* LOGO STØRRELSE */
 .login__logo {
     width: 22rem;
     padding-bottom: 3rem;
 }
 
 
-
-/* LOGIN CONTAINER GØRES BREDERE */
 .login {
     max-width: 30rem;
 }
 
 
-
-/* INPUTFELTER OG KNAPPER GØRES STØRRE */
 .login__form input,
 .login__form .login__knap {
     font-size: 1rem;
